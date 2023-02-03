@@ -2,6 +2,9 @@ package Inflearn.Inflearn;
 
 import java.util.Scanner;
 
+
+// 회문문자열비교
+// 대소문자 구분없이 뒤집어도 같은 문자인지 확인하는 문제
 public class Inflearn7 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
