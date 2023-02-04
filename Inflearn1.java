@@ -3,7 +3,7 @@ package Inflearn.Inflearn;
 
 import java.util.Scanner;
 
-public class learn1 {
+public class Inflearn1 {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         String str = scanner.next();   // 문자 입력
