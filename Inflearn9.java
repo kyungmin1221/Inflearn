@@ -3,7 +3,7 @@ package Inflearn.Inflearn;
 
 import java.util.Scanner;
 
-// isDigit() 시용 
+// isDigit() 시용
 // 숫자만 추출
 // 문자와 숫자가 섞여있는 문자열이 주어지면 그 중 숫자만 추출하여 그 순서대로 자연수를 만듭니다.
 // 맨 앞의 자연수가 0 일 경우 맨앞의 0은 고려하지 않습니다.
