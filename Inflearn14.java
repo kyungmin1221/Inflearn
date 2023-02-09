@@ -35,7 +35,7 @@ public class Inflearn14 {
 
         /*
         // 내가 해본 방식 //
-        
+
         int N = scanner.nextInt();
         int[] A = new int[N];           // 배열 선언
         int count = 1;                  // 출력할 변수 , 맨 처음 사람은 무조건 보이기때문에 초기값을 1로 설정
