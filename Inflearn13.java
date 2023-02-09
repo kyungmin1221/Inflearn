@@ -1,4 +1,5 @@
 package Inflearn.Inflearn;
+// 강의 2장 1번 //
 
 // 큰 수 출력하기 //
 /*
