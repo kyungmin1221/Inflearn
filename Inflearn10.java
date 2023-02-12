@@ -12,7 +12,7 @@ import java.util.Scanner;
 // ex ) 1 , 3 -> 1선택
 public class Inflearn10 {
     public int[] solution(String s , char t) {       // 배열로 리턴
-        int[] answer = new int[s.length()];         // 출력을 할 배열 선언 
+        int[] answer = new int[s.length()];         // 출력을 할 배열 선언
         int p = 1000;                               // 초기 길이를 크게 잡음
         for (int i = 0; i < s.length(); i++) {
             if (s.charAt(i) == t) {
