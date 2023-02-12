@@ -28,7 +28,5 @@ public class Inflearn41 {
             answer.add(str);
         }
         System.out.println(answer);
-
-
     }
 }
