@@ -28,6 +28,7 @@ public class Inflearn22 {
                     int ny = j + dy[k];
 
                     // if문 앞 조건을 만족하고 선택된 배열의 수가 확인한(위 아래 양쪽옆) 배열의 크기보다 작다면
+                    // 인덱스는 0 부터 시작이므로 nx,ny 는 0 부터 시작하여도 됌
                     if(nx>=0 && nx<N && ny>=0 && ny<N && A[i][j] < A[nx][ny]) {
                         flag = false;
                         break;              // if문 종료 , 하나라도 인덱스가 크면 다른건 확인해 볼 필요 없음
