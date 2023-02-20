@@ -40,7 +40,7 @@ public class Inflearn23 {
         Inflearn23 inflearn23 = new Inflearn23();
         Scanner scanner = new Scanner(System.in);
         int N = scanner.nextInt();
-        int[][] A  = new int[N+1][N+1];       // 1번 , 1학년 부터 시작이므로 
+        int[][] A  = new int[N+1][N+1];       // 1번 , 1학년 부터 시작이므로
         for(int i=1; i<=N; i++) {
             for(int j=1; j<=5; j++) {
                 A[i][j] = scanner.nextInt();
