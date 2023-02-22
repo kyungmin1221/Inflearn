@@ -14,10 +14,29 @@ import java.util.Scanner;
 public class Inflearn24 {
     public int solution(int N,int M, int[][] A) {
         int answer = 0;
-
-
-
-
+        for(int i=1; i<=N; i++) {
+            for(int j=1; j<=N; j++) {
+                int count = 0;
+                for(int k=0; k<M; k++) {
+                    int pi = 0;
+                    int pj =0;
+                    for(int s=0; s<N; s++) {
+                        if(A[k][s] == i) {
+                            pi = s;
+                        }
+                        if(A[k][s] == j) {
+                            pj = s;
+                        }
+                    }
+                    if(pi<pj) {
+                        count ++;
+                    }
+                }
+             if(count == M) {
+                 answer ++;         // 경우의 수 증가
+                }
+            }
+        }    // for i문 종료
         return answer;
     }
     public static void main(String[] args) {
