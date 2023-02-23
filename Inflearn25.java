@@ -12,19 +12,21 @@ package Inflearn.Inflearn;
 - 오름차순으로 정렬된 배열을 출력
  */
 
-import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Scanner;
 
 public class Inflearn25 {
-    public ArrayList<Integer> solution(int N, int[] A, int M, int[] B) {
-        ArrayList<Integer> answer = new ArrayList<>();
+    public int[] solution(int N, int[] A, int M, int[] B) {
+        int[] answer = new int[A.length + B.length];    // 출력하기 위한 배열 및 배열의 크기 선언
+        for(int i=0; i<A.length; i++) {
+            answer[i] = A[i];           // 출력을 위한 배열에 A[] 배열 원소 삽입
+        }
+        for(int i=0; i<B.length; i++) {
+            answer[i+A.length] = B[i];     // 출력을 위한 배열에 B[] 베열 원소 삽입 ( A원소를 삽입한 마지막 인덱스 다음에 삽입 )
+        }
+        Arrays.sort(answer);                // 출력 배열 오름차순으로 정렬
 
-
-
-
-
-
-
+        return answer;
     }
     public static void main(String[] args) {
         Inflearn25 inflearn25 = new Inflearn25();
@@ -40,8 +42,7 @@ public class Inflearn25 {
             B[i] = scanner.nextInt();       // 배열 입력
         }
         for(int x : inflearn25.solution(N,A,M,B)) {
-            System.out.println(x + " ");
+            System.out.print(x + " ");                      // 출력 
         }
-      //  System.out.println(inflearn25.solution(N,A,M,B));
     }
 }
