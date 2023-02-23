@@ -42,7 +42,7 @@ public class Inflearn25 {
             B[i] = scanner.nextInt();       // 배열 입력
         }
         for(int x : inflearn25.solution(N,A,M,B)) {
-            System.out.print(x + " ");                      // 출력 
+            System.out.print(x + " ");                      // 출력
         }
     }
 }
