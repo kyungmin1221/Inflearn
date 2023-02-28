@@ -12,8 +12,39 @@ A,B 두 개의 집합이 주어지면 두 집합의 공통 원소를 추출하�
 - 두 집합의 공통원소를 오름차순으로 정렬
  */
 
-public class Inflearn26 {
-    public static void main(String[] args) {
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Scanner;
 
+public class Inflearn26 {
+    public ArrayList<Integer> solution(int N, int[] A, int M, int[] B) {
+        ArrayList<Integer> answer = new ArrayList<>();
+        for(int i=0; i<A.length; i++) {
+            for(int j=0; j<B.length; j++) {
+                if(A[i] == B[j]) {
+                    answer.add(A[i]);
+                    break;              // 원소 중복을 허용하지 않음으로 공통원소를 찾으면 반복문 종료
+                }
+            }
+        }
+        Collections.sort(answer);       // Arrays.sort() 는 '배열'의 오름차순 정렬
+        return answer;
+    }
+    public static void main(String[] args) {
+        Inflearn26 inflearn26 = new Inflearn26();
+        Scanner scanner = new Scanner(System.in);
+        int N = scanner.nextInt();
+        int[] A = new int[N];
+        for(int i=0; i<N; i++) {
+            A[i] = scanner.nextInt();
+        }
+        int M = scanner.nextInt();
+        int[] B = new int[M];
+        for(int i=0; i<N; i++) {
+            B[i] = scanner.nextInt();
+        }
+        for(int x : inflearn26.solution(N,A,M,B)) {
+            System.out.print(x + " ");           // 공통 원소 출력  // 이 방법은 시간초과 걸림
+        }
     }
 }
