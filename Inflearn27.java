@@ -13,8 +13,6 @@ k일때 최대 매출액을 구하시오.
 
  */
 
-
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class Inflearn27 {
