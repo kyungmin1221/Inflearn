@@ -14,28 +14,33 @@ N개의 수로 이루어진 수열이 주어짐
 import java.util.Scanner;
 
 public class Inflearn28 {
-    public int solution(int N, int K, int[] A) {
-        int answer =0;              // 출력을 위한 변수
-        int sum=0;                  // 3개씩 합을 구할 변수
-        for(int i=0; i<K; i++) {        // 0 부터 K 까지의 합을 sum 변수에 저장
-            sum += A[i];
-        }
-        answer = sum;                   // 0 부터 K 까지의 합을 sum 변수에 저장 -> answer 에 넘겨줌
-        for(int i=K; i<N; i++) {        // 그 다음 3개씩 합을 계산하기 위해 새로운 for문 작성
-            sum += (A[i]-A[i-K]);
-            answer = Math.max(sum,answer);          // sum, answer 중 더 큰값을 answer 에 저장
+    public int Solution(int N ,int M, int[] A) {
+        int sum = 0;        // 연속 수열의 합을 저장할 변수
+        int answer =0 ;      //  출력을 위한 변수
+        int lt = 0;
+        for(int rt = 0; rt<N; rt++) {
+            sum += A[rt];
+            if(sum == M) {
+                answer ++;
+            }
+            while(sum>=M) {
+                sum -= A[lt++];
+                if(sum == M) {
+                    answer ++;
+                }
+            }
         }
         return answer;
     }
     public static void main(String[] args) {
-        Inflearn28 inflearn27 = new Inflearn28();
+        Inflearn28 inflearn28 = new Inflearn28();
         Scanner scanner = new Scanner(System.in);
-        int N = scanner.nextInt();          // 입력할 정수의 갯수
-        int K = scanner.nextInt();          // 매출을 구할 K 일수
-        int[] A = new int[N];
-        for(int i=0; i<N; i++) {
+        int N = scanner.nextInt();
+        int M = scanner.nextInt();
+        int[]A = new int[N];
+        for(int i=0; i<N; i++)  {
             A[i] = scanner.nextInt();
         }
-        System.out.println(inflearn27.solution(N,K,A));
+        System.out.println(inflearn28.Solution(N,M,A));
     }
 }

@@ -41,3 +41,4 @@ public class Inflearn27 {
         System.out.println(inflearn27.solution(N,K,A));
     }
 }
+
