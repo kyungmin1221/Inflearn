@@ -2,6 +2,7 @@ package Inflearn.Inflearn;
 
 
 // 연속 부분수열 //
+//
 
 /*
 N개의 수로 이루어진 수열이 주어짐
