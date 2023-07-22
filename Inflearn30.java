@@ -24,7 +24,7 @@ import java.util.Scanner;
 public class Inflearn30 {
     public int solution(int N,int K, int[] A) {
         int answer = 0;                 // 출력 변수
-        int count =0;                   // 길이를 저장할 변수
+        int count =0;                   // 0 을 1 로 바꾼 횟수
         int lt =0;
         for(int rt=0; rt<N; rt++) {
             if(A[rt] == 0) {
@@ -36,11 +36,10 @@ public class Inflearn30 {
                 }
                 lt ++;
             }
-            answer = Math.max(answer,rt - lt +1);
-        }
+            answer = Math.max(answer, rt - lt +1);
+        }       // for문 //
         return answer;
     }
-
 
     public static void main(String[] args) {
         Inflearn30 inflearn30 = new Inflearn30();
@@ -51,6 +50,6 @@ public class Inflearn30 {
         for(int i=0; i<N; i++){
             A[i] = scanner.nextInt();
         }
-
+        System.out.println(inflearn30.solution(N,K,A));
     }
 }
