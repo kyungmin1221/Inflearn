@@ -26,15 +26,36 @@ N일간의 매출기록과 연속구간의 길이 K가 주어지면 첫 번째 �
  */
 
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Scanner;
 
 public class Inflearn33 {
-    public int solution(int N, int K) {
+    public ArrayList<Integer> solution(int N, int K, int[] A) {
+        ArrayList<Integer> answer = new ArrayList<>();
+        HashMap<Integer, Integer> map = new HashMap<>();
+        // 0 ~ K-1 까지 키 값 저장 후 횟수 저장
+        for(int i =0; i<K-1; i++) {
+            map.put(A[i],map.getOrDefault(A[i],0)+1);
+        }
+        // 슬라이딩 윈도우 활용 //  lt 초기값 설정
+        int lt = 0;
+        for(int rt=K-1; rt<N; rt++) {
+            map.put(A[rt],map.getOrDefault(A[rt],0)+1);
+            // 4번째 크기까지의 배열 사이즈를 answer에 추가
+            answer.add(map.size());
+            // A[lt] 의 값 -1
+            map.put(A[lt],map.get(A[lt])-1);
+            //  A[lt] 의 값 -1 을 한 값이 0 이라면 원소가 없다는 뜻 이므로 해당 키값을 삭제
+            if(map.get(A[lt])==0) {
+                map.remove(A[lt]);
+            }
+            // lt 값 증가하여 배열의 위치를 오른쪽으로 한칸 씩 증가
+            lt++;
+        }
+        // 사이즈를 넣은 리스트 반환
+        return answer;
 
-
-
-
-        return ;
     }
     public static void main(String[] args) {
         Inflearn33 inflearn33 = new Inflearn33();
@@ -45,6 +66,11 @@ public class Inflearn33 {
         for(int i=0; i<N; i++) {
             A[i] = scanner.nextInt();
         }
-        System.out.println();
+
+        // 츨력히면 [ 3, 4, 4 ,3 ] 인 리스트 형태로 나오기 때문에 반복문으로 int형을 만들어줌
+        for(int x : inflearn33.solution(N,K,A)) {
+            // 한칸 씩 띄어서 출력
+            System.out.print(x + " ");
+        }
     }
 }
