@@ -16,11 +16,34 @@ package Inflearn.Inflearn;
 
  */
 
+import java.util.Comparator;
 import java.util.Scanner;
+import java.util.TreeSet;
 
 public class Inflearn35 {
-    public int solution() {
-
+    public int solution(int N,int K,int[] A) {
+        int answer = -1;
+        // TreeSet : 이진 검색 트리 자료구조를 사용하여 요소들을 정렬하고 유지
+        // 항상 정렬된 상태를 유지한다
+        // 중복 요소 허용 안함
+        // 자동 오름차순 정렬,  Comparator.reverseOrder() 를 사용해 내림차순으로 정렬
+        TreeSet<Integer> set = new TreeSet<>(Comparator.reverseOrder());
+        for(int i=0; i<N; i++) {
+            for(int j=i+1; j<N; j++) {
+                for(int m=j+1; m<N; m++) {
+                    set.add(A[i]+A[j]+A[m]);
+                }
+            }
+        }
+        int count = 0;
+        // 숫자 3개씩 더한 합들이 set 에 오름차순으로 정렬된 상태
+        for(int x : set) {
+            count ++;
+            if(count == K) {
+                return x;
+            }
+        }
+        return answer;
 
     }
     public static void main(String[] args) {
@@ -32,6 +55,6 @@ public class Inflearn35 {
         for(int i=0; i<N; i++) {
             A[i] = scanner.nextInt();
         }
-        System.out.println(inflearn35.solution());
+        System.out.println(inflearn35.solution(N,K,A));
     }
 }
