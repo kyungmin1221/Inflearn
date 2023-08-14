@@ -4,7 +4,7 @@ package Inflearn.Inflearn;
 // 입력 자료가 이미 정렬이 되있을 경우 시간복잡도 - O(N)
 // 최악의 경우는 입력 자료가 역으로 정렬된 경우 -  O(N^2)
 // 카드를 정렬하는것과 유사 , 정렬이 안 된 부분의 숫자를 하나씩 정렬된 부분의 적절한 위치를 칮아 삽입한다.
-// 
+//
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
