@@ -39,7 +39,7 @@ public class Inflearn43 {
                 }
             }
         }                   // stack 에 계산된 결과만 남아있다.
-        //  stack 의 첫번째 원소를 변수에 저장 
+        //  stack 의 첫번째 원소를 변수에 저장
         int answer = stack.get(0);
         System.out.println(answer);
     }
