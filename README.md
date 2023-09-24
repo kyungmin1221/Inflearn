@@ -1,4 +1,5 @@
-# 📝 코테 연습 문제
+# 📝 Inflean 코딩테스트 연습 문제 
+
 ## ✅ String(문자열)
 1. 문자 찾기
 2. 대소문자 변환
@@ -135,4 +136,4 @@
 ## 👨🏻‍💻 사용 언어
 - JAVA
 
-## ✅[참고자료(Inflearn)](https://www.inflearn.com/course/%EC%9E%90%EB%B0%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-%EC%BD%94%ED%85%8C%EB%8C%80%EB%B9%84/dashboard﻿)
+## ✅ [참고자료(Inflearn)](https://www.inflearn.com/course/%EC%9E%90%EB%B0%94-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-%EB%AC%B8%EC%A0%9C%ED%92%80%EC%9D%B4-%EC%BD%94%ED%85%8C%EB%8C%80%EB%B9%84/dashboard﻿)
