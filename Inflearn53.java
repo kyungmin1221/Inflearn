@@ -35,7 +35,7 @@ public class Inflearn53 {
 
         Visited[1] = true;
        //  dfs(1); // v==1
-        System.out.println( dfs(1));
+        System.out.println(dfs(1));
 
     }
     // 내가 찾는 것은 n번 정점까지 가는 경로들을 찾는것
